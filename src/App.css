@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  body {
+    font-family: 'Ubuntu', sans-serif;  
+  }
+  :root {
+    --color-dark: #171818;
+    --color-background: #111111;
+    --color-white: rgb(221, 218, 218);
+    --height-navbar: 80px;
+  }
+  html {
+    -webkit-scroll-behavior: smooth;
+    -moz-scroll-behavior: smooth;
+    -ms-scroll-behavior: smooth;
+    scroll-behavior: smooth;
+  }
+  html:focus-within {
+    -webkit-scroll-behavior: smooth;
+    -moz-scroll-behavior: smooth;
+    -ms-scroll-behavior: smooth;
+    scroll-behavior: smooth;
+  }  
