@@ -18,6 +18,7 @@ function MovieList() {
         ActionMovies,
         NowPlaying
     } = useSelector((state) => state.infoMovies)
+
     useEffect(() => {
         dispatch(getNetflixOriginals());
         dispatch(getTrendingMovies());
@@ -25,7 +26,6 @@ function MovieList() {
         dispatch(getActionMovies());
         dispatch(getNowPlaying())
     }, [dispatch])
-
     return (
         <div>
             <MovieGird movies={NetflixOriginals} title="Netflix Originals" isNetflix={true} />

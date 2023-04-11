@@ -2,6 +2,7 @@ import React from 'react'
 import { setMovieDetails } from '../store/actions';
 import { useDispatch } from 'react-redux';
 import { AiOutlineStar } from 'react-icons/ai'
+import { NavLink } from 'react-router-dom';
 import moment from "moment";
 import './MovieDetails.scss'
 
@@ -24,6 +25,7 @@ function MovieDetals(props) {
         <div className="container">
           <div className="movieInfo">
             <h1 className="movieTitle">{movie && (movie.title || movie.name)}</h1>
+            <NavLink to={`/trailer/${movie && movie.id}`} className="watch-now">WATCH NOW</NavLink>
             <p className="new">
               <span className="rating"> Rating: {movie && movie.vote_average * 10}%</span>
               <span className="popularity"> Popularity: {movie && movie.popularity}</span>
@@ -35,7 +37,6 @@ function MovieDetals(props) {
               <p> Vote Average: {movie && movie.vote_average}<AiOutlineStar className="icon-star" /></p>
               <p>Vote Count: {movie && movie.vote_count}</p>
             </div>
-
             <p className="overview">{movie && movie.overview}</p>
           </div>
         </div>

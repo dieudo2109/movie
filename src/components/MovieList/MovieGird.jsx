@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/free-mode";
 
 function MovieGird(props) {
-    const { movies, title, isNetflix } = props
+    const { movies, title, isNetflix, id } = props
     const dispatch = useDispatch()
     const handleSelectMovie = (movie) => dispatch(setMovieDetails(movie));
     return (
@@ -21,7 +21,7 @@ function MovieGird(props) {
                 freeMode={true}
                 loop={true}
                 breakpoints={{
-                    640: {
+                    200: {
                         slidesPerView: 2,
                         spaceBetween: 10,
                     },
@@ -41,6 +41,8 @@ function MovieGird(props) {
                     {movies &&
                         movies.length > 0 &&
                         movies.map((movie, index) => {
+
+
                             if (movie.poster_path && movie.backdrop_path !== null) {
                                 let imageUrl = isNetflix
                                     ? `https://image.tmdb.org/t/p/original/${movie.poster_path}`
@@ -53,6 +55,7 @@ function MovieGird(props) {
                                             src={imageUrl}
                                             alt="img"
                                         />
+
                                         <div className="movieName">{movie.title || movie.name}</div>
                                     </SwiperSlide>
                                 );

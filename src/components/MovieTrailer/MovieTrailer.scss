@@ -1,0 +1,69 @@
+.trailer{
+    color: #fcf5f5;
+    margin-top: 80px;
+    margin-bottom: 5px;
+    position: relative;
+   
+   .poster{
+        object-fit: cover;
+        position: absolute;
+        top:60px;
+        left: 200px;
+        width: 300px;
+        height: 440px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+   }
+    .banner{
+        height: 80vh;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background: rgba(0, 0, 0, 0.5);
+        .content{
+            position: absolute;
+            max-width: 850px;
+            left: 540px;
+            top:60px;
+            h1{
+                margin-bottom: 30px;
+             }
+            .category{
+                padding: 10px;
+                margin: 20px;
+                 border: 2px solid #ce1e1e;
+                 border-radius: 20px;
+                 font-size: 20px;
+                 font-weight: 600;
+             }
+             .overview1{
+                margin: 20px 0;
+                font-size: 20px;
+            }
+        }
+       
+    }
+} 
+ 
+.cast-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    .cast{
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+        .cast_name{
+           margin-top: 5px;
+        }
+        .cast_img{
+        max-width: 70%;
+            border-radius: 5px;
+        }
+    }
+  }
+
+
+
+

@@ -3,6 +3,9 @@
     position: relative;
     padding-top: 56%;
     color: var(--color-white);
+    @media only screen and (max-width: 600px) {
+      height: 270px;
+    }
   &_video{
     position: absolute;
     top: 0;

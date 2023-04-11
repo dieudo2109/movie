@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
+import { useState } from 'react';
 import { VscMute, VscUnmute } from "react-icons/vsc";
 import './Intro.scss'
 function Intro() {
+    const [isMuted, setIsMuted] = useState(true);
     return (
         <div className="Intro">
             <ReactPlayer
@@ -10,16 +12,27 @@ function Intro() {
                 loop={true}
                 width="100%"
                 height="100%"
-                volume={0}
-                muted={false}
-                url="https://vimeo.com/273686020"
+                volume={1}
+                muted={isMuted}
+                url="https://vimeo.com/736856638"
                 className="Intro_video"
             />
             <div className="Intro_info">
-                <h1 className="heading">Netflix The Rain</h1>
-                <p className="overview"> " Netflix released The Rain’s official trailer, and it provides a more substantial look at the series’ primary villain and the terrain that siblings Simone (Alba August) and Rasmus (Lucas Lynggaard Tønnesen) must navigate."</p>
+                <h1 className="heading">Netflix VeNom</h1>
+                <p className="overview"> "
+                    Netflix released the official trailer for VeNom, Brock attempting to rebuild his career by interviewing the murderous Cletus Kasady, who became the host of the Carnage, a Venom-like alien being."</p>
             </div>
-            <VscMute className="Intro_volum" />
+            {isMuted ? (
+                <VscMute
+                    className="Intro_volum"
+                    onClick={() => setIsMuted((prev) => !prev)}
+                />
+            ) : (
+                <VscUnmute
+                    className="Intro_volum"
+                    onClick={() => setIsMuted((prev) => !prev)}
+                />
+            )}
         </div>
     )
 }
